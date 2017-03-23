@@ -15,7 +15,7 @@
   pu = !"git push -u origin $(git rev-parse --abbrev-ref HEAD)"
 [core]
 	editor = vim
-	excludesfile = /Users/dgolden/.gitignore_global
+	excludesfile = /Users/jesse/.gitignore_global
 [merge]
 	tool = diffmerge
 [diff]
@@ -46,3 +46,6 @@
 	prune = true
 [include]
   path = ~/.gitconfig.local
+[user]
+	name = Jesse Lieman-Sifry
+	email = jliemansifry@gmail.com
