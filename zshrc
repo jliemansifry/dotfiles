@@ -46,7 +46,6 @@ if [[ $ZSH_EVAL_CONTEXT == 'file' ]]; then
   plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 fi
 
-
 source $ZSH/oh-my-zsh.sh
 
 # PATHs
@@ -91,6 +90,8 @@ alias ga='git add .'
 
 # helpful randoms
 alias gps='ps aux | grep'
+alias ddport='ssh -N -f -L localhost:8901:localhost:8905 dd'
+alias dtport='ssh -N -f -L localhost:8900:localhost:8904 dt'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
