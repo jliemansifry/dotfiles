@@ -20,7 +20,22 @@ filetype plugin indent on
 
 let mapleader=","       " leader is comma
 
+" fancing easy pasting
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+    set paste
+      return ""
+endfunction
+
+
 syntax enable
+
+
 
 " Solarized stuff
 let g:solarized_termtrans = 1
