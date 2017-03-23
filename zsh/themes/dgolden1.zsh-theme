@@ -10,7 +10,10 @@
 
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 # PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(__git_ps1 " (%s)") '
-PROMPT='${ret_status} %{$reset_color%}[%m] %{$fg[cyan]%}%c%{$reset_color%} $ '
+
+# orig below
+#PROMPT='${ret_status} %{$reset_color%}[%m] %{$fg[cyan]%}%c%{$reset_color%} $ '
+PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $ '
 # precmd () { __git_ps1 "%n" ":%~$ " "|%s" }
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
