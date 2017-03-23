@@ -51,7 +51,13 @@ ZSH_THEME="dgolden1"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git git-prompt)
+
+# deal with autosuggestions and syntax highlighting not playing nice on zshrc reload
+if [[ $ZSH_EVAL_CONTEXT == 'file' ]]; then
+	printf "autosuggestions loaded"
+  plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+fi
 
 source $ZSH/oh-my-zsh.sh
 # source ~/arterys/repos/zsh-git-prompt/zshrc.sh
