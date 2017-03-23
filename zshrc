@@ -55,7 +55,6 @@ plugins=(git git-prompt)
 
 # deal with autosuggestions and syntax highlighting not playing nice on zshrc reload
 if [[ $ZSH_EVAL_CONTEXT == 'file' ]]; then
-	printf "autosuggestions loaded"
   plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 fi
 
@@ -119,6 +118,17 @@ alias jnbb='jupyter notebook --no-browser'
 alias tma='tmux attach || tmux'
 # SSH into EC2 instance
 alias sse='ssh -i ~/.ssh/gcp-key.pem'
+
+# tmux aliases
+alias ta='tmux attach -t'
+alias tn='tmux new -s'
+alias tls='tmux ls'
+
+# git
+alias gs='git status'
+alias gd='git diff'
+alias ga='git add .'
+
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
