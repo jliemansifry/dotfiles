@@ -90,6 +90,7 @@ alias ga='git add .'
 
 # helpful randoms
 alias gps='ps aux | grep'
+alias hg='history | grep'
 alias ddport='ssh -N -f -L localhost:8901:localhost:8905 dd'
 alias dtport='ssh -N -f -L localhost:8900:localhost:8904 dt'
 
