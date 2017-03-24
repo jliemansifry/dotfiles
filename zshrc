@@ -58,6 +58,8 @@ if [ "$(uname)" = "Darwin" ]; then
 
   test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 else
+  # different path for zsh on linux
+  export ZSH_CUSTOM="/home/jesse/.oh-my-zsh/custom"
   # Autojump
   if [ -f /usr/share/autojump/autojump.sh ]; then
     . /usr/share/autojump/autojump.sh
