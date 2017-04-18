@@ -94,6 +94,7 @@ alias ga='git add .'
 alias gps='ps aux | grep'
 alias hg='history | grep'
 alias scp='scp -r'
+alias gcpport='ssh -N -f -L localhost:8902:localhost:8906 gcp2'
 alias ddport='ssh -N -f -L localhost:8901:localhost:8905 dd'
 alias dtport='ssh -N -f -L localhost:8900:localhost:8904 dt'
 
