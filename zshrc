@@ -98,7 +98,9 @@ alias gcpport='ssh -N -f -L localhost:8902:localhost:8906 gcp2'
 alias ddport='ssh -N -f -L localhost:8901:localhost:8905 dd'
 alias dtport='ssh -N -f -L localhost:8900:localhost:8904 dt'
 
-# The next line updates PATH for the Google Cloud SDK.
+export PYTHONWARNINGS='ignore::UserWarning'
+
+ #The next line updates PATH for the Google Cloud SDK.
 if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
   source ~/google-cloud-sdk/path.zsh.inc
 fi
