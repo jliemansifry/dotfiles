@@ -49,7 +49,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # PATHs
-export PATH=~/anaconda3/bin:/usr/local/bin:$PATH
+export PATH=$HOME/miniconda3/bin:$PATH
 
 # autojump
 if [ "$(uname)" = "Darwin" ]; then
@@ -109,6 +109,10 @@ fi
 if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
   source ~/google-cloud-sdk/completion.zsh.inc
 fi
+
+function get_pwd() {
+  echo "${PWD/$HOME/~}"
+}
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
