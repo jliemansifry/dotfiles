@@ -94,7 +94,8 @@ alias ga='git add .'
 alias gps='ps aux | grep'
 alias hg='history | grep'
 alias scp='scp -r'
-alias gcpport='ssh -N -f -L localhost:8902:localhost:8906 gcp2'
+#alias gcpport='ssh -N -f -L localhost:8902:localhost:8906 gcp2'
+alias gcpport='ssh -N -f -L localhost:8903:localhost:8907 gcp'
 alias ddport='ssh -N -f -L localhost:8901:localhost:8905 dd'
 alias dtport='ssh -N -f -L localhost:8900:localhost:8904 dt'
 
@@ -116,3 +117,6 @@ function get_pwd() {
 
 # Local config
 [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+export NVM_DIR="/Users/jesse/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
